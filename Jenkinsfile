@@ -4,11 +4,11 @@ pipeline {
   
   stages {
     
-   /* stage("code checkout) {
+   stage("code checkout") {
           steps {
-           git "https://github.com/teja996/Devops-clgproject-.git"
+           git "https://github.com/shahid4206/MAccounts.git"
           }
-          } */
+          } 
           
     stage("compile") {
       

@@ -15,7 +15,7 @@ pipeline {
       steps {
         echo 'building the appication...'
         withMaven(maven : 'maven_3.6.3'){
-        bat 'mvn clean install test'
+        bat 'mvn clean'
         }
       }
     }

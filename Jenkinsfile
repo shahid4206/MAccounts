@@ -15,29 +15,11 @@ pipeline {
       steps {
         echo 'building the appication...'
         withMaven(maven : 'maven_3.6.3'){
-        bat 'mvn clean'
+        bat 'mvn clean install test'
         }
       }
     }
    
-          
-    stage('install') {
-      
-      steps {
-        echo 'testing the appication...'
-        withMaven(maven : 'maven_3.6.3'){
-        bat 'mvn install'
-        }
-      }
-    }
-          stage('test') {
-      
-      steps {
-        echo 'testing the appication...'
-        withMaven(maven : 'maven_3.6.3'){
-        bat 'mvn test'
-        }
-      }
-    }
+   
   }
 }

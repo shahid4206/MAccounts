@@ -19,7 +19,24 @@ pipeline {
         }
       }
     }
-   
+    stage('install') {
+      
+      steps {
+        echo 'building the appication...'
+        withMaven(maven : 'maven_3.6.3'){
+        bat 'mvn install '
+        }
+      }
+    }
+   stage('test') {
+      
+      steps {
+        echo 'building the appication...'
+        withMaven(maven : 'maven_3.6.3'){
+        bat 'mvn test'
+        }
+      }
+    }
    
   }
 }

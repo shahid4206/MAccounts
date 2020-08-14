@@ -4,13 +4,13 @@ pipeline {
   
   stages {
     
-   stage("code checkout") {
+   stage('code checkout') {
           steps {
            git "https://github.com/shahid4206/MAccounts.git"
           }
           } 
           
-    stage("compile") {
+    stage('compile') {
       
       steps {
         echo 'building the appication...'
@@ -21,7 +21,7 @@ pipeline {
     }
    
           
-    stage("install") {
+    stage('install') {
       
       steps {
         echo 'testing the appication...'
@@ -30,7 +30,7 @@ pipeline {
         }
       }
     }
-          stage("test") {
+          stage('test') {
       
       steps {
         echo 'testing the appication...'
